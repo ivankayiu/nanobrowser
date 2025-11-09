@@ -1,0 +1,63 @@
+{
+  "app_metadata_name": "奈米瀏覽器",
+  "app_metadata_description": "開源嘅 Chrome 擴充功能，用於 AI 驅動嘅網頁自動化。使用您自己嘅 LLM API 金鑰執行多代理程式工作流程。OpenAI Operator 嘅替代方案。",
+  
+  "browser_bridge_title": "跨瀏覽器連接層",
+  "browser_bridge_description": "一個統一嘅連接協議層，支援多種通信技術同標籤頁面間嘅通信。",
+  
+  "connection_websocket": "WebSocket 連接",
+  "connection_messageport": "消息端口連接",
+  "connection_sharedworker": "共享工作線程連接",
+  "connection_extension_api": "Chrome 擴充功能 API",
+  
+  "status_connecting": "正在連接...",
+  "status_connected": "已連接",
+  "status_disconnecting": "正在斷開...",
+  "status_disconnected": "已斷開",
+  "status_error": "錯誤",
+  
+  "button_connect": "連接",
+  "button_disconnect": "斷開",
+  "button_send": "發送",
+  "button_cancel": "取消",
+  "button_retry": "重試",
+  
+  "error_connection_timeout": "連接超時",
+  "error_connection_failed": "連接失敗",
+  "error_invalid_message": "無效嘅訊息格式",
+  "error_retry_exceeded": "重試次數已超過限制",
+  
+  "message_connecting_dots": "正在連接...",
+  "message_connected_successfully": "連接成功",
+  "message_connection_lost": "連接已中斷",
+  "message_auto_reconnecting": "正在自動重新連接...",
+  
+  "settings_title": "設定",
+  "settings_language": "語言",
+  "settings_connection_method": "連接方式",
+  "settings_timeout": "連接超時時間（毫秒）",
+  "settings_max_retries": "最大重試次數",
+  "settings_auto_reconnect": "自動重新連接",
+  "settings_debug_mode": "調試模式",
+  
+  "help_title": "幫助",
+  "help_documentation": "查看文檔",
+  "help_report_bug": "回報問題",
+  "help_contact_support": "聯繫支援",
+  
+  "welcome_title": "歡迎使用奈米瀏覽器",
+  "welcome_message": "一個智慧嘅網頁自動化工具，由 AI 驅動。",
+  "welcome_get_started": "開始使用",
+  
+  "automation_title": "自動化",
+  "automation_start": "開始自動化",
+  "automation_stop": "停止自動化",
+  "automation_status": "自動化狀態",
+  "automation_logs": "自動化日誌",
+  
+  "ai_integration_title": "AI 整合",
+  "ai_model_selection": "選擇 AI 模型",
+  "ai_api_key": "API 金鑰",
+  "ai_api_endpoint": "API 端點",
+  "ai_test_connection": "測試連接"
+}
