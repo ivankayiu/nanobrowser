@@ -2,15 +2,15 @@
 
 ## 概述
 
-這上合頻拓了一個統一的跨瀏覽器連接層，使 AI 及使用者都能一齊操控作網頁面。**無需 API 金鑰、無需複雜設定**。
+上合頻拓了一個統一的跨瀏覽器連接層，讓 AI 和使用者都能輕鬆操控網頁。**無需 API 金鑰，也不需要複雜設定**。
 
-## 是塊針查
+## 部署步驟
 
 | 檔案 | 用途 |
-|---------|----------|
+|————|—————|
 | `nanobrowser-adapter.ts` | 直接整合 nanobrowser 現有功能的適配器 |
-| `websocket-bridge.ts` | WebSocket 連接実現（選用）|
-| `types.ts` | 統一的接口絰齢 |
+| `websocket-bridge.ts` | WebSocket 連接實現 |
+| `types.ts` | 統一的接口|
 | `README.md` | 架構設計檔 |
 
 ## 暫時 - 使用方法
@@ -42,26 +42,27 @@ console.log(element.text); // 取得文字
 // 執行任意 JS
 const result = await window.nanobrowser.execute('document.title');
 
-// 抷简橫面截圖
+```javascript
+// 截圖
 const screenshot = await window.nanobrowser.screenshot();
 ```
 
 ## 核心功能
 
 | 功能 | 描述 |
-|------|------|
-| `navigate(url)` | 潤溝鼎頁面 |
-| `click(selector)` | 為撺參數 |
-| `type(selector, text)` | 打字到輸入框 |
-| `screenshot()` | 抷简橫面截圖 |
+|———|———|
+| `navigate(url)` | 開啟指定網頁 |
+| `click(selector)` | 點擊指定元素 |
+| `type(selector, text)` | 輸入指定元素 |
+| `screenshot()` |截圖 |
 | `getContent()` | 取得頁面文字 |
 | `execute(script)` | 執行任意 JavaScript |
-| `wait(duration)` | 餐待時間 |
+| `wait(duration)` | 等待指定時間 |
 | `query(selector)` | 查詢 DOM 元素 |
 
 ## 互相操控模式
 
-### 您一次控制
+### 一次控制
 
 ```typescript
 // 使用者主動操控
@@ -87,50 +88,50 @@ if (userInput.text.length > 0) {
 }
 ```
 
-## 機常演浆
+## 機演
 
-### 不需要置侮 API
+### 無需 API 配置
 
-整個連接層直接使用現有的 Chrome Extension 消息機制，彼此粗此丘盛。
+連接層直接利用現有 Chrome Extension 消息機制進行互通。
 
-### 不需要設定 WebSocket 伺勑器
+### 無需 WebSocket 設定
 
-統一直接使用 nanobrowser 的消息糳系統。
+統一直接使用 nanobrowser 的消息系統。
 
-### 不需要置侮設定檔
+### 無需設定檔
 
-一切强矩是简單的。
+一切皆為簡潔明瞭。
 
 ## 粗粗事項
 
-1. **直接接取** nanobrowser 現有功能 - 不非設計設一個新機程序
-2. **AI 直接使用** - 不當 API 元件宗櫁
-3. **使用者也能直接使用** - 粗此丘盛地操控
-4. **粗助操控** - 等待使用者帵覧或 AI 決宮作像
+1. **直接接取** nanobrowser 現有功能，無需設計新機程序。
+2. **AI 直接使用**，無需 API 元件。
+3. **使用者也能直接使用**，烏冬操控。
+4. **操控**，等待使用者帵覧或 AI 決宮作像。
 
 ## 青休鎮客
 
-### 使用者主動操控
+### 用戶主動操作
 
 ```typescript
-// 使用者能事內自取岛黿
-(window as any).nanobrowser.click('.button');
+// 用戶可以自己點擊
+(window as any).nanobrowser.click(‹ .button ›);
 ```
 
-### AI 自学事內操控
+### AI 自主学习操作
 
 ```typescript
-// AI 不需要璵漷，直接使用
+// AI 不需要手動操作，直接使用
 function executeAction(action, data) {
   return (window as any).nanobrowser[action](data);
 }
 ```
 
-## 子空成效
+## 子成效
 
 特剩細節的第一錶：
 
-- 無需外部伺ᅙ務器
+- 無需外部伺務器
 - 無需 API 金鑰
 - 無需複雜設定
-- 直接直接直接接取現有功能
+- 直接接取現有功能
